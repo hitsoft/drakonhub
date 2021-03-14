@@ -658,11 +658,13 @@ td.white a {
 				<a class="panic_button start_button" style="display:inline-block;" href="#ui"><%= trans("MES_REGISTER_FOR_FREE") %></a>
 			</div>
 		</div>
+		% if signup then
 		<div class="mobile_only">
 			<div class="no_user" style="text-align:center;">
 				<a class="panic_button start_button" style="display:inline-block;" href="/signup"><%= trans("MES_REGISTER_FOR_FREE") %></a>
 			</div>
-		</div>	
+		</div>
+		% end
 		% end
 		% if block.type == "register" then
 		<div id="register">
@@ -876,7 +878,9 @@ td.white a {
 	
 	% if user_id == "" then
 	<a href="/logon" class="mob_menu_item_link" id="logon_mob"><%=trans("Login")%></a>
+	% if signup then
 	<a href="/signup" class="mob_menu_item_link" id="signup_mob"><%=trans("title-signup")%></a>
+	% end
 	% else
 	<a href="/account" class="mob_menu_item_link" ><%= user_name %></a>
 	<p class="mob_menu_item" onclick="code.logout()" ><%=trans("Logout")%></p>

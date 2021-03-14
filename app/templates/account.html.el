@@ -994,7 +994,9 @@ h2 {
 	
 	% if user_id == "" then
 	<a href="/logon" class="mob_menu_item_link" id="logon_mob"><%=trans("Login")%></a>
+	% if signup then
 	<a href="/signup" class="mob_menu_item_link" id="signup_mob"><%=trans("page_signup")%></a>
+	% end
 	% else
 	<a href="/account" class="mob_menu_item_link" ><%= user_name %></a>
 	<p class="mob_menu_item" onclick="code.logout()" ><%=trans("Logout")%></p>
