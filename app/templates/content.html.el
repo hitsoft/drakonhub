@@ -1144,7 +1144,7 @@ carrotquest.onReady(function () { carrotquest.removeChat(); });
 									<span class="top_menu_item"><a href="/drakonhub-source">Source</a></span>
 								%end
 							%end
-							<span class="top_menu_item"><a href="https://drakonhub.com/read/docs"><%=trans("Documentation")%></a></span>
+							<span class="top_menu_item"><a href="https://drakonhub.com/read/docs" target="_blank"><%=trans("Documentation")%></a></span>
 							% if user_id == "" then
 							<span class="top_menu_item"><a href="/logon" id="logon"><%=trans("Login")%></a></span>
 							% if content_path ~= "signup" and content_path ~= "logon" and content_path ~= "start-drakon" and content_path ~= "start-mind-map" and content_path ~= "signup-trial" and content_path ~= "trial" then
@@ -1342,7 +1342,7 @@ carrotquest.onReady(function () { carrotquest.removeChat(); });
 	<a href="https://drakon.tech/" class="mob_menu_item_link" >Drakon.Tech</a>
 	<a href="/drakonhub-source" class="mob_menu_item_link" >Source</a>
 	% end
-	<a href="https://drakonhub.com/read/docs" class="mob_menu_item_link" ><%=trans("Documentation")%></a>
+	<a href="https://drakonhub.com/read/docs" class="mob_menu_item_link" target="_blank"><%=trans("Documentation")%></a>
 	
 	% if user_id == "" then
 	<a href="/logon" class="mob_menu_item_link" id="logon_mob"><%=trans("Login")%></a>

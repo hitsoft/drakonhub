@@ -763,7 +763,7 @@ h2 {
 					<span class="top_menu_item tech"><a href="https://drakon.tech/">Drakon.Tech</a></span>
 					<span class="top_menu_item"><a href="/drakonhub-source">Source</a></span>
 					% end
-					<span class="top_menu_item"><a href="https://drakonhub.com/read/docs"><%=trans("Documentation")%></a></span>
+					<span class="top_menu_item"><a href="https://drakonhub.com/read/docs" target="_blank"><%=trans("Documentation")%></a></span>
 					% if user_id == "" then
 
 					% else
@@ -990,7 +990,7 @@ h2 {
 	<a href="https://drakon.tech/" class="mob_menu_item_link" >Drakon.Tech</a>
 	<a href="/drakonhub-source" class="mob_menu_item_link" >Source</a>
 	% end
-	<a href="https://drakonhub.com/read/docs" class="mob_menu_item_link" ><%=trans("Documentation")%></a>
+	<a href="https://drakonhub.com/read/docs" class="mob_menu_item_link"  target="_blank"><%=trans("Documentation")%></a>
 	
 	% if user_id == "" then
 	<a href="/logon" class="mob_menu_item_link" id="logon_mob"><%=trans("Login")%></a>

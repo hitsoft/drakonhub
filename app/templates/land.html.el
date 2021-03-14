@@ -872,7 +872,7 @@ td.white a {
 	
 	<a href="/read/blog" class="mob_menu_item_link" ><%=trans("MES_BLOG")%></a>
 	<a href="/drakonhub-source" class="mob_menu_item_link" >Source</a>
-	<a href="/read/docs" class="mob_menu_item_link" ><%=trans("Documentation")%></a>
+	<a href="https://drakonhub.com/read/docs" class="mob_menu_item_link" target="_blank"><%=trans("Documentation")%></a>
 	
 	% if user_id == "" then
 	<a href="/logon" class="mob_menu_item_link" id="logon_mob"><%=trans("Login")%></a>

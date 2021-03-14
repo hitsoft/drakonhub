@@ -406,8 +406,10 @@ a.nav_menu:hover {
 			<span id="topNotLoggedS" style="display:inline-block;">				
 	% if licensing then
 				<a href="/prices" class="topMenuItem"><%=trans("prices")%></a>
-	% end				
+	% end
+	% if signup then
 				<a href="/signup" class="topMenuItem"><%=trans("sign up")%></a>
+	% end			
 				<a href="/logon" class="topMenuItem selectedTopMenuItem" ><%=trans("login")%></a>
 				<span class="planet" onclick="ctrl.languageS()"><img src="/static/earth.png" width="29" height="29" alt="language" style="vertical-align:middle;"/></span>
 			</span>
@@ -440,7 +442,9 @@ a.nav_menu:hover {
 		<span id="startS">
 			<a href="/try-me" class="bigButton startDrawing"><%=trans("START DRAWING")%></a>
 			<br />
+			% if signup then
 			<a href="/signup" class="bigButton registerNow"><%=trans("SIGN UP")%></a>		
+			% end
 		</span>
 % else
 		<a href="/ide/spaces" style="display:inline-block;" class="bigButton startDrawing"><%=trans("MY DOCUMENTS")%></a>
@@ -537,8 +541,9 @@ a.nav_menu:hover {
 	% if licensing then
 				<a href="/prices" class="topMenuItem"><%=trans("prices")%></a>
 	% end				
-				
+	% if signup then			
 				<a href="/signup" class="topMenuItem"><%=trans("sign up")%></a>
+	% end			
 				<span class="topMenuItem selectedTopMenuItem" onclick="ctrl.showLogon()"><%=trans("login")%></span>
 				<span class="planet" onclick="ctrl.language()"><img src="/static/earth.png" width="29" height="29" alt="language" style="vertical-align:middle;"/></span>
 			</span>
@@ -587,7 +592,9 @@ a.nav_menu:hover {
 % if user_id == "" then
 		<span id="start">
 			<a href="/try-me" class="bigButton startDrawing"><%=trans("START DRAWING")%></a>
+	% if signup then		
 			<a href="/signup" class="bigButton registerNow"><%=trans("SIGN UP")%></a>
+	% end		
 	% if licensing then
 			<a href="/prices" class="bigButton registerNow"><%=trans("MES_PRICES")%></a>
 	% end
@@ -651,7 +658,9 @@ a.nav_menu:hover {
 % if user_id == "" then
 			<span id="start2">
 				<a href="/try-me" class="bigButton startDrawing2"><%=trans("START DRAWING")%></a>
+	% if signup then			
 				<a href="/signup" class="bigButton registerNow2"><%=trans("SIGN UP")%></a>
+	% end			
 	% if licensing then
 				<a href="/prices" class="bigButton registerNow2"><%=trans("MES_PRICES")%></a>
 	% end
@@ -724,9 +733,11 @@ a.nav_menu:hover {
 							<div class="topMenuItem " style="margin-left:5px;" onclick="ctrl.cancelLogon()"><%=trans("cancel")%></div>
 						</div>
 					</td>
+					% if signup then
 					<td style="width:50%; text-align:right; padding-right:10px; line-height: 200%;">
 						<a href="/signup"><%=trans("sign up")%></a><br /><a href="/reset"><%=trans("forgot_pass")%></a>
 					</td>
+					% end
 				</tr>
 			</table>
 		</div>
