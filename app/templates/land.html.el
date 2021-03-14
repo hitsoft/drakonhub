@@ -658,7 +658,7 @@ td.white a {
 				<a class="panic_button start_button" style="display:inline-block;" href="#ui"><%= trans("MES_REGISTER_FOR_FREE") %></a>
 			</div>
 		</div>
-		% if signup then
+		% if not on_premises then
 		<div class="mobile_only">
 			<div class="no_user" style="text-align:center;">
 				<a class="panic_button start_button" style="display:inline-block;" href="/signup"><%= trans("MES_REGISTER_FOR_FREE") %></a>
@@ -878,7 +878,7 @@ td.white a {
 	
 	% if user_id == "" then
 	<a href="/logon" class="mob_menu_item_link" id="logon_mob"><%=trans("Login")%></a>
-	% if signup then
+	% if not on_premises then
 	<a href="/signup" class="mob_menu_item_link" id="signup_mob"><%=trans("title-signup")%></a>
 	% end
 	% else

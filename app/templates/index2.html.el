@@ -526,7 +526,7 @@ a.nav_mob:hover {
 	% if licensing then
 				<a href="/prices" class="topMenuItem"><%=trans("prices")%></a>
 	% end
-	% if signup then
+	% if not on_premises then
 				<a href="/signup" class="topMenuItem"><%=trans("sign up")%></a>
 	% end
 				<a href="/logon" class="topMenuItem selectedTopMenuItem" ><%=trans("login")%></a>
@@ -561,7 +561,7 @@ a.nav_mob:hover {
 		<span id="startS">
 			<a href="/try-me" class="bigButton startDrawing"><%=trans("START DRAWING")%></a>
 			<br />
-			% if signup then
+			% if not on_premises then
 			<a href="/signup" class="bigButton registerNow"><%=trans("MES_10_DAYS_TRIAL")%></a>
 			% end
 		</span>
@@ -704,7 +704,7 @@ a.nav_mob:hover {
 	% if licensing then
 				<a href="/prices" class="topMenuItem"><%=trans("prices")%></a>
 	% end				
-    % if signup then
+    % if not on_premises then
 				<a href="/signup" class="topMenuItem"><%=trans("sign up")%></a>
     % end
 				<span class="topMenuItem selectedTopMenuItem" onclick="ctrl.showLogon()"><%=trans("login")%></span>
@@ -844,7 +844,7 @@ a.nav_mob:hover {
 % if user_id == "" then
 		<span id="start">
 			<a href="/try-me" class="bigButton startDrawing"><%=trans("START DRAWING")%></a>
-			% if signup then
+			% if not on_premises then
 			<a href="/signup" class="bigButton registerNow"><%=trans("MES_10_DAYS_TRIAL")%></a>
 			% end
 		</span>
@@ -935,7 +935,7 @@ a.nav_mob:hover {
 							<div class="topMenuItem " style="margin-left:5px; font-size:14pt;" onclick="ctrl.cancelLogon()"><%=trans("cancel")%></div>
 						</div>
 					</td>
-					% if signup then
+					% if not on_premises then
 					<td style="width:50%; text-align:right; padding-right:10px; line-height: 200%;">
 						<a href="/signup"><%=trans("sign up")%></a><br /><a href="/reset"><%=trans("forgot_pass")%></a>
 					</td>
